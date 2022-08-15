@@ -228,7 +228,7 @@ func handleSuffixCCWithLD(cmd string, path string) string {
 		obj := ""
 		for _, s := range s1 {
 			if strings.HasSuffix(s, ".o") {
-				obj = " " + strings.Replace(s, ".o", ".bc", -1) + obj
+				obj += " " + strings.Replace(s, ".o", ".bc", -1)
 			}
 		}
 		res += obj
